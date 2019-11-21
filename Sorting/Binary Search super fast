@@ -1,0 +1,17 @@
+def binary_search(input_array, value):
+
+    midpoint=(len(input_array))//2
+    
+   
+    if input_array[midpoint]==value:
+        return(True)
+        
+    elif input_array[midpoint]>value:
+           return(binary_search(input_array[:midpoint],value))
+               
+
+    elif input_array[midpoint]<value:
+        return(binary_search(input_array[midpoint+1:],value))
+
+    else:
+        return(-1)
