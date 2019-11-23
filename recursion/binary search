@@ -1,3 +1,6 @@
+''' base case is one element array'''
+
+
 def binary_search(input_array, value):
 
     midpoint=(len(input_array))//2
