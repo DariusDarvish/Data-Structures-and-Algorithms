@@ -1,0 +1,21 @@
+lisp=[]
+def hanger(n,j):
+    n=[char for char in n]
+    j=[char for char in j]
+    print(n)
+    print(j)
+    print(lisp)
+    if len(n)==0 and len(j)==0:
+        return lisp
+    if len(n)>0 and len(j)==0:
+        lisp.append(n.pop(0))
+        return hanger(n,j)
+    if len(n)==0 and len(j)>0:
+        lisp.append(j.pop(0))
+        return hanger(n,j)
+    if len(n)>0 and len(j)>0:
+        lisp.append(n.pop(0))
+        lisp.append(j.pop(0))
+        return hanger(n,j)
+
+print(hanger('lol','swag'))
