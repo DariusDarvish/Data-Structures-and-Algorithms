@@ -1,4 +1,3 @@
-
 def binarySearch(target,shelf,left=None,right=None):
     if left is None:
         left=0
