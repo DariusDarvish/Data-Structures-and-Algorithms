@@ -1,5 +1,6 @@
 visited=[]
 def seatingCharts(seating_chart,current_chart):
+    print('current',current_chart)
     if len(current_chart)==len(seating_chart):
         visited.append(current_chart.copy())
         return
@@ -8,7 +9,7 @@ def seatingCharts(seating_chart,current_chart):
         if x not in current_chart:
             current_chart.append(x)
             seatingCharts(seating_chart,current_chart)
-            #This step is the key to set up the search by removing the charatcer we are allowing for us to create the recursion branches
+            #This removes the most recently added item so the recursion can try the next branch.
             current_chart.pop()
 
     return visited
