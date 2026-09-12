@@ -5,6 +5,7 @@ def passWordCracker(current_password, characters, total):
         visited.append(current_password)
         return
 
+    #Use a for loop when you are iterating through options at a level.
     for x in characters:
         passWordCracker(
             current_password + str(x),

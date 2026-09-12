@@ -1,10 +1,10 @@
 visited=[]
 def seatingCharts(seating_chart,current_chart):
-    print('current',current_chart)
     if len(current_chart)==len(seating_chart):
         visited.append(current_chart.copy())
         return
-    
+
+    #Use a for loop when you are iterating through options at a level.
     for x in seating_chart:
         if x not in current_chart:
             current_chart.append(x)

@@ -5,7 +5,8 @@ def walterVanDyck(balance,current,openRem,closeRem):
         if current not in visited:
             visited.append(current)
         return
-
+     #Use recursion without a loop when the decision is 
+     # “do this” or “don’t do this” on the next step.
     if openRem<balance:
         current=current+'('
         openRem+=1

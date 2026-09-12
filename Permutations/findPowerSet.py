@@ -4,6 +4,8 @@ def subsets(characters, index, subset):
         visited.append(subset.copy())
         return
 
+    #Use recursion without a loop when the decision is 
+    # “do this” or “don’t do this” on the next step.
     char = characters[index]
 
     subset.append(char)
