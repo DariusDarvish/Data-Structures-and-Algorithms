@@ -1,7 +1,8 @@
 visited=[]
 def walterVanDyck(balance,current,openRem,closeRem):
     if openRem==balance and closeRem==balance:
-        visited.append(current)
+        if current not in visited:
+            visited.append(current)
         return
 
     if openRem<balance:
